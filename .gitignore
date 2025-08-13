@@ -1,0 +1,7 @@
+*.class
+*.xml
+*.exe
+.vscode
+.idea
+application programs/*.exe
+*.bkp
