@@ -5,12 +5,12 @@
 #include<iostream>
 // #include<io.h>
 
-#define MAXINODE 50
+#define MAXINODE 5 //50
 
 #define READ 1
 #define WRITE 2
 
-#define MAXFILESIZE 2048
+#define MAXFILESIZE 100 //2048
 
 #define REGULAR 1
 #define SPECIAL 2
@@ -368,12 +368,12 @@ int OpenFile(char *name, int mode)
     return i;
 }
 
-void CloseFileByName(int fd)
-{
-    UFDTArr[fd].ptrfiletable->readoffset = 0;
-    UFDTArr[fd].ptrfiletable->writeoffset = 0;
-    UFDTArr[fd].ptrfiletable->ptrinode->ReferenceCount--;
-}
+// void CloseFileByName(int fd)
+// {
+//     UFDTArr[fd].ptrfiletable->readoffset = 0;
+//     UFDTArr[fd].ptrfiletable->writeoffset = 0;
+//     UFDTArr[fd].ptrfiletable->ptrinode->ReferenceCount--;
+// }
 
 int CloseFileByName(char *name)
 {
